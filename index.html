@@ -8,48 +8,78 @@
     <title>Welcome to my Portfolio!</title>
 </head>
 <body>
+    <!-- Header titel and nav bar -->
     <header>
         <h1>Maya Lynn Cohen</h1>
         <nav>
-            <a href="#meet-me">Meet me</a>
+            <a href="#about-me">About me</a>
             <a href="#my-work">My work</a>
-            <a href="#contatct-me">Contact me</a>
+            <a href="#contact-me">Contact me</a>
         </nav>
     </header>
+    <!-- Banner image -->
     <div id="bannerimage" title="This is a banner image"></div>
+    <!-- Main -->
     <main>
-        <section id="meet-me">
-            <h2>Meet me!</h2>
+        <!-- First section -->
+        <section id="about-me-title">
+            <h2>About me</h2>
+        </section>
+        <section id="about-me">  
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi rerum, repellat nulla facilis eligendi minus ut cumque rem qui debitis sequi voluptates nemo soluta corporis blanditiis minima, eaque illum explicabo!</p>
             <img src="assets/images/Profile-Picture.jpg" alt="Picture of me" id="profile-picture">
         </section>
-        <section id="my-work">
+        <!-- second section -->
+        <section id="my-work-title">  
             <h2>My work</h2>
-            <div class="container">
-                <figure class="big-page">
-                    <img src="#" alt="Preview of the webpage">
-                    <figcaption>Title</figcaption>
-                </figure>
-                <figure class="small-page">
-                    <img src="#" alt="Preview of the webpage">
-                    <figcaption>Title</figcaption>
-                </figure>
-                <figure class="small-page">
-                    <img src="#" alt="Preview of the webpage">
-                    <figcaption>Title</figcaption>
-                </figure>
-                <figure class="small-page">
-                    <img src="#" alt="Preview of the webpage">
-                    <figcaption>Title</figcaption>
-                </figure>
-                <figure class="small-page">
-                    <img src="#" alt="Preview of the webpage">
-                    <figcaption>Title</figcaption>
-                </figure>
-            </div>
+        </section>
+        <section id="my-work">
+            <!-- grouping together all the pages for the right side -->
+            <!-- Section for the first big page -->
+            <section id="big-page"> 
+                <a href=""><img src="../my-portfolio/assets/images/css-cheatsheet.jpg" alt="Preview of the webpage"></a>
+                <div class="big-title">
+                    <h3>CSS Cheatsheet</h3>
+                    <p>Find all my favorite css snippets on this cheatsheet</p>
+                </div>
+            </section>
+            <!-- Section for all the smaller pages -->
+            <section id="small-pages">
+                <div class="page">
+                    <a href=""><img src="../my-portfolio/assets/images/css-cheatsheet.jpg" alt="Preview of the webpage"></a>
+                    <div class="title">
+                        <h3>CSS Cheatsheet</h3>
+                        <p>Find all my favorite css snippets on this cheatsheet</p>
+                    </div>
+                </div>
+                <div class="page">
+                    <a href=""><img src="../my-portfolio/assets/images/css-cheatsheet.jpg" alt="Preview of the webpage"></a>
+                    <div class="title">
+                        <h3>CSS Cheatsheet</h3>
+                        <p>Find all my favorite css snippets on this cheatsheet</p>
+                    </div>
+                </div>
+                <div class="page">
+                    <a href=""><img src="../my-portfolio/assets/images/css-cheatsheet.jpg" alt="Preview of the webpage"></a>
+                    <div class="title">
+                        <h3>CSS Cheatsheet</h3>
+                        <p>Find all my favorite css snippets on this cheatsheet</p>
+                    </div>
+                </div>
+                <div class="page">
+                    <a href=""><img src="../my-portfolio/assets/images/css-cheatsheet.jpg" alt="Preview of the webpage"></a>
+                    <div class="title">
+                        <h3>CSS Cheatsheet</h3>
+                        <p>Find all my favorite css snippets on this cheatsheet</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Third section -->
+        <section id="contact-me-title">
+            <h2>Contact me!</h2>
         </section>
         <section id="contact-me">
-            <h2>Contact me!</h2>
             <ul>
                 <li><a href="mailto:mayalynncohen@gmail.com">mayalynncohen@gmail.com</a></li>
                 <li><a href="tel:13603197491">call me at (360)-319-7491</a></li>
@@ -57,6 +87,7 @@
                 <li><a href="https://www.linkedin.com/in/maya-lynn-cohen-49845a204/" target="_blank">find me on Linkedin</a></li>
             </ul>
         </section>
+        <!-- Footer -->
         <footer>
             <h3>&copy; 2022 Maya Lynn Cohen</h3>
         </footer>

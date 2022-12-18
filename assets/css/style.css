@@ -1,3 +1,12 @@
+/* Variables */
+:root {
+    --header-background: #2A324B;
+    --header-text: #DED9E2;
+    --titles: #2A324B;
+    --websites: #987284;
+}
+
+/* Personal css preset */
 * {
     margin: 0;
     padding: 0;
@@ -5,23 +14,30 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Body */
+body {
+    background-color: var(--header-text);
+}
+
+/* Header */
 header {
     height: 15vh;
-    background-color: #254164;
+    background-color: var(--header-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #192A3B;
+    border-bottom: 3px solid var(--header-text);
 }
 
 header h1 {
-    color: #192A3B;
-    background-color: #5A7A99;
+    color: var(--header-text);
+    background-color: var(--header-background);
     display: flex;
     align-items: center;
-    height: 5vh;
-    padding: 0 5px;
-    border: 3px solid #192A3B;
+    height: 7vh;
+    padding: 0 7px;
+    border: 3px solid var(--header-text);
+    margin-left: 20px;
 }
 
 header nav {
@@ -32,7 +48,7 @@ header nav {
 
 header a {
     font-size: 30px;
-    color: #5A7A99;
+    color: #F7F4EA;
     text-decoration: none;
     margin: 0 10px;
 }
@@ -43,15 +59,178 @@ nav a:hover {
     bottom: 5px;
 }
 
+/* Banner image */
 #bannerimage {
-    height: 300px;
+    height: 30vh;
     width: 100%;
     margin-bottom: 25px;
     background-image: url(../images/Deception-pass.jpg);
     background-size: cover;
     background-position: center;
+    border-bottom: 3px solid var(--titles);
 }
 
-footer {
+/* Main Styling */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* First section styling */
+#about-me-title {
+    padding: 5px;
+    width: 30%;
+    border-right: 3px solid var(--titles);
+    color: var(--titles);
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+#about-me {
+    display: flex;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+#about-me p {
+    padding: 5px;
+    width: 100%;
+}
+
+#about-me img {
+    padding: 1%;
+    width: 15%;
+    border: 3px solid var(--titles);
+}
+
+/* Second section styling */
+#my-work-title {
+    padding: 5px;
+    width: 30%;
+    border-right: 3px solid var(--titles);
+    color: var(--titles);
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+#my-work {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Main big page styling */
+#big-page {
+    margin: auto;
+    margin-bottom: 2%;
+    position: relative;
+    border: 5px solid var(--websites);
+    width: 80%;
+}
+
+#big-page img {
+    text-align: center;
+    background-color: var(--websites);
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.big-title {
+    background-color: var(--websites);
+    text-align: left;
+    position: absolute;
+    bottom: 10%;
+    padding: 10px 5px;
+}
+
+
+/* Hover effect */
+#big-page:hover img {
+    opacity: 100%;
+}
+
+/* Smaller pages underneath */
+#small-pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#small-pages .page {
+    border: 5px solid var(--websites);
+    width: 39%;
+    height: 40%;
+    margin: 1%;
+    position: relative;
+}
+
+#small-pages .page img {
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    background-color: var(--websites);
+    text-align: left;
+    position: absolute;
+    bottom: 10%;
+    padding: 5px 2.5px;
+    font-size: 50%;
+}
+
+/* Hover effect */
+#small-pages:hover .page img {
+    opacity: 100%;
+}
+
+/* contact styling */
+ul {
+    list-style-type: none;
+}
+
+#contact-me-title {
+    padding: 5px;
+    width: 30%;
+    border-right: 3px solid var(--titles);
+    color: var(--titles);
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+#contact-me {
+    width: 70%;
     height: 15vh;
+    margin-bottom: 50px;
+}
+
+#contact-me ul {
+    font-weight: bolder;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--header-text);
+}
+
+#contact-me a {
+    text-decoration: none;
+    color: var(--websites);
+}
+
+/* Footer */
+footer {
+    color: var(--header-text);
+    background-color: var(--header-background);
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
