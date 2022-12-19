@@ -21,12 +21,14 @@ body {
 
 /* Header */
 header {
+    width: 100%;
     height: 15vh;
     background-color: var(--header-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid var(--header-text);
+    font-size: font-size: 200%;;
 }
 
 header h1 {
@@ -102,7 +104,13 @@ main {
 #about-me img {
     padding: 1%;
     width: 15%;
-    border: 3px solid var(--titles);
+    border: 5px solid var(--websites);
+    transition: 1s;
+}
+
+/* Hover effect on img */
+#about-me:hover img {
+    padding: 0;
 }
 
 /* Second section styling */
@@ -130,14 +138,19 @@ main {
     position: relative;
     border: 5px solid var(--websites);
     width: 80%;
+    overflow:hidden
 }
 
 #big-page img {
     text-align: center;
     background-color: var(--websites);
     opacity: 50%;
+    transform: scale(1.1);
+    object-fit: cover;
+    overflow: hidden;
     width: 100%;
     height: 100%;
+    transition: 3s;
 }
 
 .big-title {
@@ -146,15 +159,23 @@ main {
     position: absolute;
     bottom: 10%;
     padding: 10px 5px;
+    transition: 3s;
 }
 
 
 /* Hover effect */
 #big-page:hover img {
     opacity: 100%;
+    transform: scale(1.5);
+}
+
+#big-page:hover>.big-title {
+    opacity: 80%;
 }
 
 /* Smaller pages underneath */
+
+
 #small-pages {
     display: flex;
     flex-direction: row;
@@ -170,10 +191,17 @@ main {
     position: relative;
 }
 
-#small-pages .page img {
-    opacity: 50%;
+#small-pages img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
+    overflow: hidden;
+    transition: 3s;
+}
+
+.page .page-img {
+    opacity: 50%;
+    transform: scale(1.1);
 }
 
 .title {
@@ -183,11 +211,21 @@ main {
     bottom: 10%;
     padding: 5px 2.5px;
     font-size: 50%;
+    transition: 2s;
+}
+
+.page {
+    overflow:hidden
 }
 
 /* Hover effect */
-#small-pages:hover .page img {
+.page:hover .page-img {
     opacity: 100%;
+    transform: scale(1.5);
+}
+
+.page:hover > .title {
+    opacity: 80%;
 }
 
 /* contact styling */
@@ -199,30 +237,43 @@ ul {
     padding: 5px;
     width: 30%;
     border-right: 3px solid var(--titles);
-    color: var(--titles);
     text-align: right;
     margin-bottom: 50px;
 }
 
 #contact-me {
+    color: var(--titles);
     width: 70%;
     height: 15vh;
     margin-bottom: 50px;
 }
 
 #contact-me ul {
+    position: relative;
     font-weight: bolder;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     background-color: var(--header-text);
 }
 
-#contact-me a {
+.link {
+    margin: 1px;
+}
+
+.link > a {
     text-decoration: none;
     color: var(--websites);
 }
+
+
+/* Hover effect */
+.link:hover > a {
+    font-size: 120%;
+}
+
 
 /* Footer */
 footer {
@@ -233,4 +284,72 @@ footer {
     justify-content: center;
     display: flex;
     align-items: center;
+}
+
+/* Media queries */
+
+/* For screens 1023px and smaller */
+@media screen and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        font-size: 80%;
+    }
+    header h1 {
+        margin: 0;
+    }
+    header nav {
+        align-self: center;
+    }
+    header a {
+        font-size: 150%;
+    }
+    main {
+        flex-direction: column;
+    }
+    #about-me-title, #my-work-title, #contact-me-title {
+        text-align: center;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 3px solid var(--titles);
+    }
+    #about-me {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    #about-me img {
+        width: 30vw;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #my-work, #contact-me {
+        width: 100%;
+        text-align: center;
+    }
+    .link {
+        width: 45%;
+    }
+}
+
+/* For screens 768px and smaller */
+@media screen and (max-width: 768px) {
+    header {
+        height: 10vh;
+        font-size: 50%;
+    }
+    header h1 {
+        margin: 0;
+        height: 5vh;
+    }
+    #small-pages .page {
+        width: 80%;
+    }
+    .title {
+        padding: 10px 5px;
+        font-size: 100%;
+    }
+    .link {
+        width: 80%;
+    }
 }
