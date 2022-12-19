@@ -50,7 +50,7 @@ header nav {
 
 header a {
     font-size: 30px;
-    color: #F7F4EA;
+    color: var(--header-text);
     text-decoration: none;
     margin: 0 10px;
 }
@@ -162,6 +162,9 @@ main {
     transition: 3s;
 }
 
+#big-page a {
+    color: var(--header-text);
+}
 
 /* Hover effect */
 #big-page:hover img {
@@ -169,7 +172,7 @@ main {
     transform: scale(1.5);
 }
 
-#big-page:hover>.big-title {
+#big-page:hover > a > .big-title {
     opacity: 80%;
 }
 
@@ -218,13 +221,17 @@ main {
     overflow:hidden
 }
 
+.page a {
+    color: var(--header-text);
+}
+
 /* Hover effect */
 .page:hover .page-img {
     opacity: 100%;
     transform: scale(1.5);
 }
 
-.page:hover > .title {
+.page:hover > a > .title {
     opacity: 80%;
 }
 
