@@ -14,6 +14,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-padding-top: 20vh;
+ }
+
 /* Body */
 body {
     background-color: var(--header-text);
@@ -28,7 +32,8 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid var(--header-text);
-    font-size: font-size: 200%;;
+    position: fixed;
+    z-index: 5;
 }
 
 header h1 {
@@ -63,7 +68,7 @@ nav a:hover {
 
 /* Banner image */
 #bannerimage {
-    height: 30vh;
+    height: 50vh;
     width: 100%;
     margin-bottom: 25px;
     background-image: url(../images/Deception-pass.jpg);
@@ -99,6 +104,7 @@ main {
 #about-me p {
     padding: 5px;
     width: 100%;
+    text-align: center;
 }
 
 #about-me img {
@@ -213,7 +219,7 @@ main {
     position: absolute;
     bottom: 10%;
     padding: 5px 2.5px;
-    font-size: 50%;
+    font-size: 70%;
     transition: 2s;
 }
 
@@ -308,7 +314,7 @@ footer {
         align-self: center;
     }
     header a {
-        font-size: 150%;
+        font-size: 170%;
     }
     main {
         flex-direction: column;
@@ -343,7 +349,7 @@ footer {
 @media screen and (max-width: 768px) {
     header {
         height: 10vh;
-        font-size: 50%;
+        font-size: 70%;
     }
     header h1 {
         margin: 0;
