@@ -195,14 +195,13 @@ main {
 #small-pages .page {
     border: 5px solid var(--websites);
     width: 39%;
-    height: 40%;
     margin: 1%;
     position: relative;
 }
 
 #small-pages img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4/2;
     object-fit: fill;
     overflow: hidden;
     transition: 3s;
